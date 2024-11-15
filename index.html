@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Biščák - Grafický Dizajnér Portfolio</title>
+    <link rel="stylesheet" href="./CSS/home.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const titles = document.querySelectorAll('.grid .description h2[data-img-src]');
+        const overlay = document.getElementById('fullscreen-overlay');
+        const fullscreenImage = document.getElementById('fullscreen-image');
+
+        if (titles.length === 0) {
+            console.error("No titles with 'data-img-src' found!");
+        }
+
+        titles.forEach(title => {
+            title.addEventListener('click', () => {
+                const imgSrc = title.getAttribute('data-img-src');
+                if (imgSrc) {
+                    fullscreenImage.src = imgSrc;
+                    overlay.style.display = 'flex';
+                } else {
+                    console.error("No image source found for:", title);
+                }
+            });
+        });
+
+        document.querySelector('#fullscreen-overlay .close').addEventListener('click', closeFullscreen);
+
+        function closeFullscreen() {
+            overlay.style.display = 'none';
+        }
+    });
+    </script>
+    <style>
+        #fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #fullscreen-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid white;
+        }
+
+        #fullscreen-overlay .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav_bar">
+            <aside class="logo">
+                <figure>
+                    <img src="" alt="logo"> <!--todo import logo-->
+                </figure>
+            </aside>
+            <ul class="nav_list">
+                <li><a href="#praca">Práce</a></li>
+                <li><a href="#o_mne">O mne</a></li>
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="mailto:tbiscak@gmail.com">Kontakt</a></li>
+            </ul>
+            <div class="burger">
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox">
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li class="nav_listitem menu__item"><a href="#praca" title="Moje práce">Práce</a></li>   
+                        <li class="nav_listitem menu__item"><a href="#o_mne" title="O mne">O mne</a></li>   
+                        <li class="nav_listitem menu__item"><a href="#sluzby" title="FAQ section">Služby</a></li>   
+                        <li class="nav_listitem menu__item contact_btn"><a href="mailto:tbiscak@gmail.com" title="Company Email">Kontakt</a></li>   
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="landing_page" id="land">
+            <article class="landing_page">
+                <h1>Tobias <br> Biščák</h1>
+                <span></span>
+                <strong>Grafický Dizajnér</strong>
+            </article>
+            <figure class="tobias">
+                <img src="./images/tobias.png" alt="portrét">
+            </figure>
+        </section>
+        <section class="praca" id="praca">
+            <article class="praca">
+                <h2>Práce</h2>
+                <span></span>
+                <h3>Grafika</h3>
+                <aside class="grid">
+                    <div class="grid-item1 grid_item">
+                        <div class="description">
+                            <h2 data-img-src="./images/plagáty/amy poster.jpg">Plagát - Amy</h2>
+                        </div>
+                        <img src="./images/plagáty/amy poster.jpg" alt="praca">
+                    </div>
+                    <div class="grid-item2 grid_item">
+                        <div class="description">
+                            <h2 data-img-src="./images/plagáty/hokej poster.jpg">Plagát - Hokej</h2>
+                        </div>
+                        <img src="./images/plagáty/hokej poster.jpg" alt="praca">
+                    </div>
+                    <div class="grid-item3 grid_item">
+                        <div class="description">
+                            <h2 data-img-src="./images/plagáty/oasis comaback.jpg">Plagát - Oasis</h2>
+                        </div>
+                        <img src="./images/plagáty/oasis comaback.jpg" alt="praca">
+                    </div>
+                    <div class="grid-item4 grid_item">
+                        <div class="description">
+                            <h2 data-img-src="./images/plagáty/Plagát.jpg">Plagát - Motivation</h2>
+                        </div>
+                        <img src="./images/plagáty/Plagát.jpg" alt="praca">
+                    </div>
+                    <div class="grid-item5 grid_item">
+                        <div class="description">
+                            <h2 data-img-src="./images/plagáty/spoloc.tance 2...png">Plagát - Tanec</h2>
+                        </div>
+                        <img src="./images/plagáty/spoloc.tance 2...png" alt="praca">
+                    </div>
+                    <div class="wrapper">
+                        <div class="grid-item6 grid_item">
+                            <div class="description">
+                                <h2 data-img-src="./images/loga/Multispark jpg-01.jpg">Logo - Multispark</h2>
+                            </div>
+                            <img src="./images/loga/Multispark jpg-01.jpg" alt="praca">
+                        </div>
+                        <div class="grid-item7 grid_item">
+                            <div class="description">
+                                <h2 data-img-src="./images/loga/pp-01.jpg">Logo - PP</h2>
+                            </div>
+                            <img src="./images/loga/pp-01.jpg" alt="praca">
+                        </div>
+                    </div>
+                    <div class="grid-item8 grid_item last">
+                        <div class="description">
+                            <h2 data-img-src="./images/reštaurácia u samuraja-01.jpg">Web Design - Samuraj Sushi</h2>
+                        </div>
+                        <img src="./images/reštaurácia u samuraja-01.jpg" alt="praca">
+                    </div>
+                </aside>
+                <h3>Video</h3>
+                <aside class="vid">
+                    <div>
+                        <video controls>
+                            <source src="./images/Mama_TobiasBiscak.mp4">
+                        </video>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="./images/Videoklip basketbal TB_scale_2x_prob-3.mp4">
+                        </video>
+                    </div>
+                </aside>
+            </article>
+        </section>
+        <section class="o_mne" id="o_mne">
+            <article class="o_mne">
+                <aside>
+                    <h2>O mne</h2>
+                    <span></span>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem at fuga, non temporibus cum, esse officia debitis repellendus modi vel quidem explicabo? Ipsum odit commodi perferendis dicta quibusdam libero quis.
+                    </p>
+                </aside>
+                <figure class="ng">
+                    <img class="img" src="./images/tobias_small.png" alt="custom_portrét"> 
+                </figure>
+            </article>
+            <article class="ruky">
+                <h2>Zručnosti</h2>
+                <span></span>
+                <div class="wrapper">
+                    <aside>
+                        <div class="container">
+                            <div class="meter"></div>
+                        </div>
+                        <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" color="#F6EB14" fill="none">
+                                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                <path d="M15 11L15 15C15 16.1026 14.483 16 13.5 16C12.1193 16 11 14.8807 11 13.5C11 12.1193 12.1193 11 13.5 11H15ZM15 11V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8 8V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </figure>
+                    </aside>
+                    <aside>
+                        <div class="container">
+                            <div class="meter"></div>
+                        </div>
+                        <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" color="#f6eb14" fill="none">
+                                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                <path d="M6.5 16V12M6.5 12V9.125C6.5 9.00892 6.5 8.95087 6.50482 8.90198C6.55158 8.42721 6.92721 8.05158 7.40198 8.00482C7.45087 8 7.50892 8 7.625 8H9C10.1046 8 11 8.89543 11 10C11 11.1046 10.1046 12 9 12H6.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17.4658 11.2225C17.2923 10.5267 16.4782 10 15.5 10C14.3954 10 13.5 10.6716 13.5 11.5C13.5 12.3284 14.3954 13 15.5 13C16.6046 13 17.5 13.6716 17.5 14.5C17.5 15.3284 16.6046 16 15.5 16C14.5183 16 13.7019 15.4696 13.5323 14.77" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </figure>
+                    </aside>
+                    <aside>
+                        <div class="container">
+                            <div class="meter"></div>
+                        </div>
+                        <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" color="#f6eb14" fill="none">
+                                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                <path d="M13 16L12.1339 13.2M7 16L7.86614 13.2M7.86614 13.2L8.59031 10.8589C9.17989 8.95298 9.47468 8 10 8C10.5253 8 10.8201 8.95298 11.4097 10.8589L12.1339 13.2M7.86614 13.2H12.1339" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16 16V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16 8.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </figure>
+                    </aside>
+                    <aside>
+                        <div class="container">
+                            <div class="meter"></div>
+                        </div>
+                        <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" color="#f6eb14" fill="none">
+                                <circle cx="15" cy="12" r="3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                <path d="M9 21C10.6569 21 12 19.6569 12 18V15H9C7.34315 15 6 16.3431 6 18C6 19.6569 7.34315 21 9 21Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                <path d="M12 9V15H9C7.34315 15 6 13.6569 6 12C6 10.3431 7.34315 9 9 9H12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 3V9H9C7.34315 9 6 7.65685 6 6C6 4.34315 7.34315 3 9 3H12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 3V9H15C16.6569 9 18 7.65685 18 6C18 4.34315 16.6569 3 15 3H12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </figure>
+                    </aside>
+                    <aside>
+                        <div class="container">
+                            <div class="meter"></div>
+                        </div>
+                        <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" color="#f6eb14" fill="none">
+                                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                <path d="M7 16V12M7 12V8.57143C7 8.21809 7.23449 8 7.57143 8H9C10.1046 8 11 8.89543 11 10C11 11.1046 10.1046 12 9 12H7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14 10.5V12.5M14 12.5V16M14 12.5C14.561 11.752 15.0832 10.8199 16 10.5663C16.1547 10.5235 16.3207 10.5 16.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </figure>
+                    </aside>
+                </div>
+            </article>
+        </section>
+        <section class="sluzby" id="sluzby">
+            <article class="sluzby">
+                <h2>Služby</h2>
+                <aside>
+                    <div class="wrapper">
+                        <div class="container"><h4>Tvorba loga</h4></div>
+                        <aside>
+                            <img src="" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quam quos ad sit dicta ex nisi beatae doloremque exercitationem.</p>
+                        </aside>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="wrapper">
+                        <div class="container"><h4>Branding</h4></div>
+                        <aside>
+                            <img src="" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quam quos ad sit dicta ex nisi beatae doloremque exercitationem.</p>
+                        </aside>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="wrapper">
+                        <div class="container"><h4>Reklamné materiály</h4></div>
+                        <aside>
+                            <img src="" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quam quos ad sit dicta ex nisi beatae doloremque exercitationem.</p>
+                        </aside>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="wrapper">
+                        <div class="container"><h4>Grafika pre sociálne siete</h4></div>
+                        <aside>
+                            <img src="" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quam quos ad sit dicta ex nisi beatae doloremque exercitationem.</p>
+                        </aside>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="wrapper">
+                        <div class="container"><h4>Tvorba tlačovín</h4></div>
+                        <aside>
+                            <img src="" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quam quos ad sit dicta ex nisi beatae doloremque exercitationem.</p>
+                        </aside>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="wrapper">
+                        <div class="container"><h4>Web dizajn</h4></div>
+                        <aside>
+                            <img src="" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quam quos ad sit dicta ex nisi beatae doloremque exercitationem.</p>
+                        </aside>
+                    </div>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section class="copyright">
+            <aside class="social">
+                <a href="https://www.facebook.com/tobias.biscak">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/tobiasek.b/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                </a>
+                <a href="mailto:tbiscak@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+                </a>
+            </aside>
+            <p>
+                &copy; Tobias Biščák
+            </p>
+        </section>
+    </footer>
+    <div id="fullscreen-overlay">
+        <span class="close" onclick="closeFullscreen()">✖</span>
+        <img id="fullscreen-image" src="" alt="Fullscreen Image">
+    </div>
+</body>
+</html>
