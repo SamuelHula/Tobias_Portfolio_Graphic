@@ -749,6 +749,8 @@
     footer p{
         width: 20%;
 
+        display: flex;
+
         font-family: var(--text);
         font-size: 1.2rem;
 
@@ -756,6 +758,7 @@
     }
     footer a{
         display: block; 
+        color: white;
     }
     @media screen and (max-width: 859px){
         footer section{
