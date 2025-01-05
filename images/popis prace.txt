@@ -1,0 +1,35 @@
+hlavna stránka 
+1. v navigácií treba dať logo ktoré bude v prílohe
+2. na mojej hlavnej treba dať vektorový objekt za mňa možem ti ho poslať alebo môžeš to skúsiť aj pomocou tej stranky ktoru si mi ukazoval toto môžeme doriešiť aj na intraku 
+
+práce 
+1. práce bude treba zmenšiť a to tak aby sa zmestili tri vedľa seba ked su loga tak daj kludne dve pod seba zároveň by som chcel aby sa po ich rozkliktuti zobrazia krátke popisy o praci môžeš to dať kludne niekde napravo 
+2.potom je tam tá web stránka a jej dizajn neviem či by si vedel to tak spraviť ako keby si si ju mohol nejako pozriet že by bola stránka v stránke
+zašlem ti aj ju do prílohy
+3.texty ku prácam posielam v prílohe
+
+
+O mne 
+1.posielam ti text o mne
+
+Ahoj volám sa  Tobias a som grafický dizajnér . Už od malička ma fascinovalo, ako dokáže dobrý dizajn rozprávať príbehy a vytvárať emócie. 
+Každý projekt vnímam ako príležitosť ukázať svoju kreativitu a zároveň pomôcť klientom dosiahnuť ich ciele.
+
+
+Zručnosti
+
+skús ich prerobiť tak že tam daš ešte aj názov danneho programu skus potom pozmenit tu vec podla toho ako dobre ovladam danny program
+tie ikonky daj asi skúr v ľavo 
+Ai-85%
+PS-90%
+ID-80
+figma-70%
+PR-85%
+
+služby 
+pošlem ti návrhy grafiky ked ukazem na dannu službu farba sa zmeni na žltu po rozkliknutí nas prehodí na ako keby podstránku a na nej bude popis služby a cenník
+do cenniku kludne daj lorem 
+pošlem ti teda ku tým službám prílohu
+
+
+
