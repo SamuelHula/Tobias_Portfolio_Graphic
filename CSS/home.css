@@ -52,6 +52,20 @@
         width: 20%;
         height: 100%;
     }
+    .logo figure{
+        width: 50%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        padding: 0;
+    }
+    .logo figure img{
+        height: 60%;
+    }
     .nav_list{
         display: flex;
         justify-content: space-evenly;
@@ -267,7 +281,7 @@
     article.landing_page{
         width: 35%;
     }
-    figure{
+    .landing_page figure{
         display: flex;
         align-items: end;
 
@@ -277,7 +291,7 @@
 
         overflow: hidden;
     }
-    figure img{
+    .landing_page figure img{
         width: 85%;
 
         filter: grayscale(100%);
