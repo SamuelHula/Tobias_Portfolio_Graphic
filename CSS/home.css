@@ -691,7 +691,7 @@
         .ruky aside{
             width: 100%;
         }
-        .ruky .wrapper{
+        .ruky > .wrapper{
             justify-content: center;
             flex-direction: column;
         }
