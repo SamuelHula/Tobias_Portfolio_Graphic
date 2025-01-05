@@ -674,11 +674,18 @@
     section.sluzby{
         width: 100%;
         margin: 10% 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     article.sluzby{
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+
+        margin-bottom: 10%;
     }
     .sluzby h2{
         width: 100%;
@@ -708,17 +715,22 @@
         flex-wrap: wrap;
 
         width: 100%;
+
+        margin-top: 5%;
     }
     .sluzby .wrapper{
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        width: 25%;
+        width: 30%;
 
         margin: 1% 4% ;
+        padding: 3%;
         border: var(--white) solid 5px;
         border-radius: 1000px;
+
+        position: relative;
     }
     .sluzby figure{
         display: flex;
@@ -731,7 +743,9 @@
         margin: 0;
     }
     .sluzby figure img{
-        width: 60px;
+        width: 100px;
+
+        position: absolute;
     }
     .sluzby .h4{
         width: calc(100% - 60px);
@@ -744,10 +758,107 @@
 
         color: white;
     }
+    .sluzby h4{
+        padding: 0;
+        margin: 0;
+    }
     @media screen and (max-width: 1200px){
         .sluzby aside{
             width: 80%;
         }
+    }
+    @media screen and (max-width: 992px){
+        .sluzby .wrapper{
+            width: 60%;
+        }
+        .sluzby .wrapper figure img{
+            position: relative;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+        }
+    }
+    @media screen and (max-width: 457px){
+        .sluzby .wrapper{
+            width: 80%;
+            border-radius: 0;
+        }
+    }
+    .tvorba{
+        width: 80%;
+
+        margin-top: 10%;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .tvorba .desc{
+        width: 40%;
+    }
+    .tvorba .desc .heading{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .tvorba .desc .heading figure{
+        width: 60px;
+        height: 100%;
+
+        padding: 0;
+        margin: 0;
+    }
+    .tvorba .desc .heading figure img{
+        width: 60px;
+        height: 60px;
+    }
+    .tvorba .desc h3{
+        font-family: var(--podnadpis);
+        font-size: 2rem;
+        font-weight: bold;
+
+        margin-left: 3%;
+
+        color: var(--yellow);
+    }
+    .tvorba .desc p{
+        font-family: var(--text);
+        font-size: 1.2rem;
+
+        text-align: justify;
+
+        color: white;
+    }
+    .tvorba .price{
+        width: 20%;
+    }
+    .tvorba .price div{
+        width: 100%;
+
+
+        box-sizing: border-box;
+        padding: 5%;
+        border: var(--yellow) solid 4px;
+        border-radius: 40px;
+    }
+    .tvorba .price h3{
+        font-family: var(--podnadpis);
+        font-size: 2rem;
+        font-weight: bold;
+
+        text-align: center;
+
+        margin-left: 3%;
+
+        color: var(--white);
+    }
+    .tvorba .price div p{
+
+        font-family: var(--text);
+        font-size: 1.4rem;
+
+        text-align: justify;
+
+        color: white;
     }
 }
 @layer footer{
