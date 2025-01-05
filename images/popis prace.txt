@@ -1,22 +1,10 @@
 hlavna stránka 
 2. na mojej hlavnej treba dať vektorový objekt za mňa možem ti ho poslať alebo môžeš to skúsiť aj pomocou tej stranky ktoru si mi ukazoval toto môžeme doriešiť aj na intraku 
 
-práce 
-1. práce bude treba zmenšiť a to tak aby sa zmestili tri vedľa seba ked su loga tak daj kludne dve pod seba zároveň by som chcel aby sa po ich rozkliktuti zobrazia krátke popisy o praci môžeš to dať kludne niekde napravo 
+
 2.potom je tam tá web stránka a jej dizajn neviem či by si vedel to tak spraviť ako keby si si ju mohol nejako pozriet že by bola stránka v stránke
 zašlem ti aj ju do prílohy
 
 
-
-
-Zručnosti
-
-skús ich prerobiť tak že tam daš ešte aj názov danneho programu skus potom pozmenit tu vec podla toho ako dobre ovladam danny program
-tie ikonky daj asi skúr v ľavo 
-Ai-85%
-PS-90%
-ID-80
-figma-70%
-PR-85%
 
 

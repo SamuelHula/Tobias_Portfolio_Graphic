@@ -409,7 +409,7 @@
         flex-wrap: wrap;
     }
     .praca .grid div{
-        width: 40%;
+        width: 25%;
         margin: 2%;
         position: relative;
     }
@@ -452,7 +452,7 @@
         width: 100%;    
     }
     .description h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .description ol{
         width: 60%;
@@ -464,7 +464,7 @@
         width: 100%;
 
         font-family: var(--text);
-        font-size: 1.3rem;
+        font-size: .8rem;
         font-weight: bold;
 
         color: white;
@@ -473,7 +473,7 @@
         width: 60%;
 
         font-family: var(--text);
-        font-size: 1.3rem;
+        font-size: .8rem;
         font-weight: bold;
 
         text-align: justify;
@@ -635,18 +635,30 @@
         justify-content: space-evenly;
     }
     .ruky aside{
+        width: 40%;
+        margin: 5% 0;
+    }
+    .ruky aside h4{
+        font-family: var(--podnadpis);
+        font-size: 1.5rem;
+
+        margin: 0;
+
+        color: var(--yellow);
+    }
+    .ruky aside .wrapper{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
-        width: 40%;
-        margin: 5% 0;
+        width: 100%;
     }
     .ruky .container{
         width: 75%;
+        height: 20px;
+
         margin-right: 5%;
         border: var(--yellow) 2px solid;
-        height: 20px;
         padding: 0;
     }
     .ruky figure{ 
@@ -662,6 +674,18 @@
         width: 80%;
         height: 100%;
         background-color: var(--yellow);
+    }
+    .ruky aside:nth-child(2) .container div.meter{
+        width: 90%;
+    }
+    .ruky aside:nth-child(3) .container div.meter{
+        width: 85%;
+    }
+    .ruky aside:nth-child(4) .container div.meter{
+        width: 70%;
+    }
+    .ruky aside:nth-child(5) .container div.meter{
+        width: 85%;
     }
     @media screen and (max-width: 845px){
         .ruky aside{
