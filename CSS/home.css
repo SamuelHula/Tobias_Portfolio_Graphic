@@ -33,6 +33,10 @@
         width: 100%;
         height: 10vh;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         position: fixed;
         top: 0;
         left: 0;
@@ -45,7 +49,7 @@
         justify-content: space-between;
         align-items: center;
 
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
     .logo{
@@ -537,7 +541,7 @@
         margin-bottom: 20%;
     }
     article.o_mne aside p{
-        width: 80%;
+        width: 100%;
 
         font-family: var(--text);
         font-size: 1.5rem;
@@ -550,6 +554,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        overflow: hidden;
 
         width: 450px;
         height: 450px;
@@ -784,7 +790,7 @@
         }
     }
     .tvorba{
-        width: 80%;
+        width: 100%;
 
         margin-top: 10%;
 
