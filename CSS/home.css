@@ -70,6 +70,10 @@
     .logo figure img{
         height: 45%;
     }
+    .logo a::before{
+        display: none;
+        visibility: 0;
+    }
     .nav_list{
         display: flex;
         justify-content: space-evenly;
@@ -94,7 +98,8 @@
 
         transition: all .3s;
     }
-    .nav_bar a:before {
+    .nav_list a:before 
+    .menu_box a:before{
         content: '';
         background: var(--yellow);
         display: block;
@@ -105,7 +110,8 @@
         height: 3px;
         transition: all .3s ease-in-out;
     }
-    .nav_bar a:hover::before{
+    .nav_list a:hover::before
+    .menu_box a:hover::before{
         width: 100%;
     }
     .burger{
