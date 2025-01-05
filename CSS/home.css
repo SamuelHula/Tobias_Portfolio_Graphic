@@ -68,7 +68,7 @@
         padding: 0;
     }
     .logo figure img{
-        height: 60%;
+        height: 45%;
     }
     .nav_list{
         display: flex;
@@ -456,6 +456,8 @@
 
         opacity: 0;
 
+        cursor: pointer;
+
         transition: all .3s;
     }
     .grid .wrapper{
@@ -494,8 +496,7 @@
         font-size: .8rem;
         font-weight: bold;
 
-        text-align: justify;
-        text-align-last: center;
+        text-align: left;
 
         color: white;
     }
@@ -662,7 +663,7 @@
 
         margin: 0;
 
-        color: var(--yellow);
+        color: var(--white);
     }
     .ruky aside .wrapper{
         display: flex;
@@ -771,10 +772,10 @@
         justify-content: space-between;
         align-items: center;
 
-        width: 30%;
+        width: 80%;
 
-        margin: 1% 4% ;
-        padding: 3%;
+        padding: 7%;
+
         border: var(--white) solid 5px;
         border-radius: 1000px;
 
@@ -806,6 +807,15 @@
 
         color: white;
     }
+    .sluzby a{
+        display: block;
+
+        width: 30%;
+
+        margin: 2%;
+
+        text-decoration: none;
+    }
     .sluzby h4{
         padding: 0;
         margin: 0;
@@ -816,7 +826,7 @@
         }
     }
     @media screen and (max-width: 992px){
-        .sluzby .wrapper{
+        .sluzby a{
             width: 60%;
         }
         .sluzby .wrapper figure img{
@@ -825,16 +835,22 @@
             aspect-ratio: 1 / 1;
         }
     }
-    @media screen and (max-width: 457px){
-        .sluzby .wrapper{
+    @media screen and (max-width: 593px){
+        .sluzby a{
             width: 80%;
             border-radius: 0;
+        }
+        .sluzby .wrapper figure img {
+            height: 35px;
+            width: 35px;
+        }
+        .sluzby .h4{
+            font-size: 1rem;
         }
     }
     .tvorba{
         width: 100%;
-
-        margin-top: 10%;
+        height: 80vh;
 
         display: flex;
         justify-content: space-evenly;
