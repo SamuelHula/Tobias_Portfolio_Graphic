@@ -588,7 +588,7 @@
         border-radius: 50%;
         border: var(--white) solid 10px;
 
-        background-color: var(--yellow);
+        background-color: var(--black);
     }
     .o_mne figure img.img{
         width: 80%;
@@ -780,10 +780,6 @@
 
         width: 80%;
 
-        padding: 7%;
-
-        border: var(--white) solid 5px;
-        border-radius: 1000px;
 
         position: relative;
     }
@@ -799,6 +795,11 @@
     }
     .sluzby figure img{
         width: 100px;
+        height: 100px;
+
+        border: white solid 5px;
+        border-radius: 50%;
+        margin-right: -70px;
 
         position: absolute;
     }
@@ -812,6 +813,12 @@
         text-align: center;
 
         color: white;
+
+        padding: 7%;
+
+        border: var(--white) solid 5px;
+        border-start-end-radius: 1000px;
+        border-end-end-radius: 1000px;
     }
     .sluzby a{
         display: block;
