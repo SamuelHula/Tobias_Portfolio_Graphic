@@ -37,7 +37,7 @@
         justify-content: center;
         align-items: center;
 
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 2;
@@ -344,15 +344,15 @@
     }
     .landing_page .image{
         position: absolute;
-        top: 150px;
-        right: -150px;
+        top: 85px;
+        right: -15px;
 
-        transform: rotateZ(12deg);
+        transform: rotateZ(0deg);
 
         overflow: hidden;
     }
     .landing_page .image img{
-        width: 1200px;
+        width: 100%;
     }
     @media screen and (max-width: 1184px){
         .landing_page figure{
@@ -646,7 +646,7 @@
     }
     .ruky span{
         display: block;
-        width: 215px;
+        width: 350px;
         content: "";
         height: 10px;
         background-color: var(--yellow);
