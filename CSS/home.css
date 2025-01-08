@@ -108,7 +108,7 @@
         left: 0;
         width: 0;
         height: 3px;
-        transition: all .3s ease-in-out;
+        transition: all .5s ease-in-out;
     }
     .nav_list a:hover::before,
     .menu_box a:hover::before{
