@@ -443,6 +443,10 @@
     .praca .grid div img{
         width: 100%;
     }
+    .praca figure{
+        padding: 0;
+        margin: 0;
+    }
     .praca .grid div .description{
         display: flex;
         flex-direction: column;
@@ -518,6 +522,44 @@
     }
     .praca aside.vid div video{
         width: 100%;
+    }
+    .services aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        overflow: hidden;
+    
+        position: relative;
+    
+        width: 50%;
+    } 
+    @keyframes fade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .mySlides {
+        display: none; 
+        width: 100%; 
+        height: auto; 
+        animation-name: fade;
+        animation-duration: 3s; 
+    }
+    .slideshow-container img {
+        width: 100%; 
+        height: auto; 
+        margin: auto;
+        display: block; 
+    }
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
     }
     @media screen and (max-width: 906px){
         .praca aside.vid{
